@@ -1,29 +1,42 @@
 # LBYCPEI-FinalProject
+
 **Pages:**
+
 - Log-in / Register
 - Buyer Homepage
     - View Catalogue
-		- Multiple Pages
-	- Cart Page
-		- Select Quantity
-		- Confirmation Page (Discount & Information)
-		- Rating
-		- Thank you
-	- Search for Product
-		- Multiple Pages
+        - Multiple Pages
+    - Cart Page
+        - Select Quantity
+        - Confirmation Page (Discount & Information)
+        - Rating
+        - Thank you
+    - Search for Product
+        - Multiple Pages
 - Seller Homepage
-	- View Catalogue
-		- Multiple Pages
-	- Manage Products
-		- Add Product
-		- Edit Product
-		- Remove Product
+    - View Catalogue
+        - Multiple Pages
+    - Manage Products
+        - Add Product
+        - Edit Product
+        - Remove Product
 
-**Pages:**
+**Custom Product Object:**
+
 - String name
 - double price
-- int quantityInStock 
+- int quantityInStock
 - String imageFileName
 - String description
 - String[] category
 - double rating
+
+**Division of Tasks**
+
+- Log-in / Register (RENZ)
+- View Catalogue (MARCUS)
+- Cart Page (MARCUS)
+- Search for Product (RENZ)
+- View Catalogue (MARCUS)
+- Manage Products (KYLE)
+- Database (KYLE)
