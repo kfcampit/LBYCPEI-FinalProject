@@ -6,6 +6,7 @@ module com.example.lbycpeifinalproject {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires javafx.graphics;
+    requires com.opencsv;
 
     opens com.example.lbycpeifinalproject to javafx.fxml;
     exports com.example.lbycpeifinalproject;
