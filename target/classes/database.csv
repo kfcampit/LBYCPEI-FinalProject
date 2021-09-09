@@ -1,0 +1,4 @@
+PRODUCT_ID,PRODUCT_NAME,PRODUCT_PRICE,QUANTITY_IN_STOCK,IMAGE_FILE_NAME,PRODUCT_DESC,PRODUCT_CATEG,PRODUCT_RATING
+101,product A,99.99,12,101.png,this is product a description,A;B;C,3.8
+102,product B,109.99,99,102.png,this is product b description,B;C,4.2
+103,product C,1999.99,47,103.png,this is product c description,A;D,4.8
