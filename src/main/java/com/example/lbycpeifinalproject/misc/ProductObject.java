@@ -1,14 +1,14 @@
 package com.example.lbycpeifinalproject.misc;
 
 public class ProductObject implements ProductInterface{
-    private int id;
-    private String name;
-    private double price;
-    private int quantityInStock;
-    private String imageFileName;
-    private String description;
+    private int id = 0;
+    private String name = "";
+    private double price = 0;
+    private int quantityInStock = 0;
+    private String imageFileName = "";
+    private String description = "";
     private String[] category;
-    private double rating;
+    private double rating = 0;
 
     @Override
     public int getId() {

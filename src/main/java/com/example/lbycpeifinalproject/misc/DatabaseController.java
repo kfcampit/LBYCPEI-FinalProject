@@ -1,30 +1,25 @@
 package com.example.lbycpeifinalproject.misc;
-import com.opencsv.CSVParser;
-import com.opencsv.CSVParserBuilder;
-import com.opencsv.CSVReader;
-import com.opencsv.CSVReaderBuilder;
-import javafx.scene.shape.Path;
+import com.opencsv.*;
 
-import java.io.IOException;
+import java.io.FileWriter;
 import java.io.Reader;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class DatabaseController {
 
-    private static final int MAX_NUM = 100;
-    public static int numberProducts;
-    public static ProductObject[] products = new ProductObject[MAX_NUM];
+    private final int MAX_NUM = 100;
+    public int numberProducts;
+    public ProductObject[] products = new ProductObject[MAX_NUM];
 
-    public static void loadDatabase() throws Exception {
+    public void loadDatabase() throws Exception {
         Reader reader = Files.newBufferedReader(java.nio.file.Path.of("src/main/assets/database.csv"));
         List<String[]> data = readAll(reader);
 
         numberProducts = data.size();
 
         for (int i = 0; i < numberProducts; i++) {
+            products[i] = new ProductObject();
             products[i].setId(Integer.parseInt(data.get(i)[0]));
             products[i].setName(data.get(i)[1]);
             products[i].setPrice(Double.parseDouble(data.get(i)[2]));
@@ -38,7 +33,7 @@ public class DatabaseController {
 
     }
 
-    public static List<String[]> readAll(Reader reader) throws Exception {
+    public List<String[]> readAll(Reader reader) throws Exception {
         CSVParser parser = new CSVParserBuilder()
                 .withSeparator(',')
                 .withIgnoreQuotations(false)
@@ -57,11 +52,37 @@ public class DatabaseController {
         return list;
     }
 
-    public static void updateDatabase() {
+    public void updateDatabase() throws Exception {
+        CSVWriter writer = new CSVWriter(new FileWriter("src/main/assets/database.csv"));
+        String[] line = new String[8];
+        List<String[]> stringArray = new ArrayList<>(Collections.emptyList());
 
+        stringArray.add(new String[]{
+                "PRODUCT_ID",
+                "PRODUCT_NAME",
+                "PRODUCT_PRICE",
+                "QUANTITY_IN_STOCK",
+                "IMAGE_FILE_NAME",
+                "PRODUCT_DESC",
+                "PRODUCT_CATEG",
+                "PRODUCT_RATING"
+        });
+
+        for (int i = 0; i < numberProducts; i++) {
+            line = new String[8];
+            line[0] = String.valueOf(products[i].getId());
+            line[1] = products[i].getName();
+            line[2] = String.valueOf(products[i].getPrice());
+            line[3] = String.valueOf(products[i].getQuantityInStock());
+            line[4] = products[i].getImageFileName();
+            line[5] = products[i].getDescription();
+            line[6] = String.join(";", products[i].getCategory());
+            line[7] = String.valueOf(products[i].getRating());
+
+            stringArray.add(line);
+        }
+        writer.writeAll(stringArray);
+        writer.close();
     }
 
-    public static void main(String[] args) throws Exception {
-        loadDatabase();
-    }
 }
