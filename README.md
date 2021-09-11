@@ -39,4 +39,4 @@
 - Search for Product (RENZ)
 - View Catalogue (MARCUS)
 - Manage Products (KYLE)
-- Database (KYLE)
+- Database (KYLE) **[DONE]**
