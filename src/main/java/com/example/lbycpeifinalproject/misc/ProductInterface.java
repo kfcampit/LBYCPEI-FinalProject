@@ -13,8 +13,8 @@ public interface ProductInterface {
     int getQuantityInStock();
     void setQuantityInStock(int quantityInStock);
 
-    String getImageFileName();
-    void setImageFileName(String imageFileName);
+    String[] getImageFileName();
+    void setImageFileName(String[] imageFileName);
 
     String getDescription();
     void setDescription(String description);

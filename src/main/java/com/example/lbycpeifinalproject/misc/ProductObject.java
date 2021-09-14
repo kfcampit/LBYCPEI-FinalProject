@@ -5,9 +5,9 @@ public class ProductObject implements ProductInterface{
     private String name = "";
     private double price = 0;
     private int quantityInStock = 0;
-    private String imageFileName = "";
+    public String[] imageFileName;
     private String description = "";
-    private String[] category;
+    public String[] category;
     private double rating = 0;
 
     @Override
@@ -47,11 +47,11 @@ public class ProductObject implements ProductInterface{
     }
 
     @Override
-    public String getImageFileName() {
+    public String[] getImageFileName() {
         return imageFileName;
     }
     @Override
-    public void setImageFileName(String imageFileName) {
+    public void setImageFileName(String[] imageFileName) {
         this.imageFileName = imageFileName;
     }
 

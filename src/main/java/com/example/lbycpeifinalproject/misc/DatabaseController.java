@@ -24,7 +24,7 @@ public class DatabaseController {
             products[i].setName(data.get(i)[1]);
             products[i].setPrice(Double.parseDouble(data.get(i)[2]));
             products[i].setQuantityInStock(Integer.parseInt(data.get(i)[3]));
-            products[i].setImageFileName(data.get(i)[4]);
+            products[i].setImageFileName(data.get(i)[4].split(";"));
             products[i].setDescription(data.get(i)[5]);
             products[i].setCategory(data.get(i)[6].split(";"));
             products[i].setRating(Double.parseDouble(data.get(i)[2]));
@@ -74,7 +74,7 @@ public class DatabaseController {
             line[1] = products[i].getName();
             line[2] = String.valueOf(products[i].getPrice());
             line[3] = String.valueOf(products[i].getQuantityInStock());
-            line[4] = products[i].getImageFileName();
+            line[4] = String.join(";", products[i].getImageFileName());
             line[5] = products[i].getDescription();
             line[6] = String.join(";", products[i].getCategory());
             line[7] = String.valueOf(products[i].getRating());
