@@ -27,17 +27,17 @@
                   </Text>
                   <HBox>
                      <children>
-                        <TextField>
+                        <TextField fx:id="imageTextBoxOne">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="48.0" right="8.0" />
+                              <Insets left="40.0" right="8.0" />
                            </HBox.margin>
                         </TextField>
-                        <Button fx:id="saveImageButtonOne" mnemonicParsing="false" text="Save">
+                        <Button mnemonicParsing="false" onAction="#onSaveImageOne" text="Save">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                         </Button>
                      </children>
@@ -49,17 +49,17 @@
                   </Text>
                   <HBox layoutX="10.0" layoutY="274.0">
                      <children>
-                        <TextField>
+                        <TextField fx:id="imageTextBoxTwo">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="48.0" right="8.0" />
+                              <Insets left="40.0" right="8.0" />
                            </HBox.margin>
                         </TextField>
-                        <Button fx:id="saveImageButtonTwo" mnemonicParsing="false" text="Save">
+                        <Button mnemonicParsing="false" onAction="#onSaveImageTwo" text="Save">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                         </Button>
                      </children>
@@ -69,17 +69,17 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="292.0">
                      <children>
-                        <TextField>
+                        <TextField fx:id="imageTextBoxThree">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="48.0" right="8.0" />
+                              <Insets left="40.0" right="8.0" />
                            </HBox.margin>
                         </TextField>
-                        <Button fx:id="saveImageButtonThree" mnemonicParsing="false" text="Save">
+                        <Button mnemonicParsing="false" onAction="#onSaveImageThree" text="Save">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                         </Button>
                      </children>
@@ -89,17 +89,17 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="310.0">
                      <children>
-                        <TextField>
+                        <TextField fx:id="imageTextBoxFour">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="48.0" right="8.0" />
+                              <Insets left="40.0" right="8.0" />
                            </HBox.margin>
                         </TextField>
-                        <Button fx:id="saveImageButtonFour" mnemonicParsing="false" text="Save">
+                        <Button mnemonicParsing="false" onAction="#onSaveImageFour" text="Save">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                         </Button>
                      </children>
@@ -121,13 +121,13 @@
                   </Text>
                   <HBox>
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name:" textAlignment="CENTER" textOrigin="TOP">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name:" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="78.97265625">
                            <HBox.margin>
                               <Insets left="16.0" right="16.0" />
                            </HBox.margin></Text>
                         <TextField fx:id="inputProductName" prefHeight="18.0" prefWidth="232.0">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                         </TextField>
                      </children>
@@ -143,7 +143,7 @@
                         </Text>
                         <TextField fx:id="inputPrice" prefHeight="18.0" prefWidth="94.0">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                         </TextField>
                         <Text layoutX="26.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:" textAlignment="CENTER" textOrigin="TOP">
@@ -153,7 +153,7 @@
                         </Text>
                         <TextField fx:id="inputQuantity" layoutX="68.0" layoutY="10.0" prefHeight="18.0" prefWidth="94.0">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                         </TextField>
                      </children>
@@ -170,6 +170,9 @@
                      <VBox.margin>
                         <Insets bottom="8.0" left="16.0" right="24.0" top="8.0" />
                      </VBox.margin>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
                   </TextArea>
                   <HBox layoutX="10.0" layoutY="90.0">
                      <children>
@@ -180,7 +183,7 @@
                         </Text>
                         <TextField fx:id="inputCategories" prefHeight="18.0" prefWidth="254.0">
                            <font>
-                              <Font size="8.0" />
+                              <Font size="10.0" />
                            </font>
                         </TextField>
                      </children>
@@ -188,12 +191,12 @@
                   <Text fx:id="errorMessage" fill="RED" layoutX="26.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Error Message" textAlignment="CENTER" visible="false" wrappingWidth="370" />
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="editProductCancel" mnemonicParsing="false" text="Cancel">
+                        <Button mnemonicParsing="false" onAction="#onCancelButton" text="Cancel">
                            <HBox.margin>
                               <Insets left="16.0" top="48.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="editProductSave" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Save">
+                        <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#onSaveButton" text="Save">
                            <HBox.margin>
                               <Insets left="236.0" top="48.0" />
                            </HBox.margin>
