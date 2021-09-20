@@ -10,6 +10,7 @@ module com.example.lbycpeifinalproject {
 
     opens com.example.lbycpeifinalproject to javafx.fxml;
     opens com.example.lbycpeifinalproject.seller to javafx.fxml;
+    exports com.example.lbycpeifinalproject.misc;
     exports com.example.lbycpeifinalproject;
     exports com.example.lbycpeifinalproject.seller;
     exports com.example.lbycpeifinalproject.buyer;
