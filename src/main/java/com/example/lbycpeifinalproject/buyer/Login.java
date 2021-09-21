@@ -5,7 +5,6 @@ import com.example.lbycpeifinalproject.MainHandler;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import javafx.application.Application;
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
