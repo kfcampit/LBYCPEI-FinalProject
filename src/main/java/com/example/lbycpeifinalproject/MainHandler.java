@@ -1,6 +1,7 @@
 package com.example.lbycpeifinalproject;
 
 import com.example.lbycpeifinalproject.misc.DatabaseController;
+import com.example.lbycpeifinalproject.misc.ProductObject;
 import com.example.lbycpeifinalproject.seller.EditProductApplication;
 import com.example.lbycpeifinalproject.seller.EditProductController;
 
