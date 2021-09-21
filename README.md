@@ -26,7 +26,7 @@
 - String name
 - double price
 - int quantityInStock
-- String imageFileName
+- String[] imageFileName
 - String description
 - String[] category
 - double rating
