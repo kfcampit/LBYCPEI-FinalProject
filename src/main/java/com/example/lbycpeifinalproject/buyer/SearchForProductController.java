@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 
 import java.util.Locale;
 import java.util.Objects;
@@ -53,5 +54,19 @@ public class SearchForProductController {
     public void OnSearchPressed(ActionEvent actionEvent) throws Exception {
         String searchQuery = searchField.getText().toUpperCase(Locale.ROOT);
         setTable(getItemDetails(searchQuery));
+    }
+
+    public void goToItem(MouseEvent mouseEvent) {
+        tableView.setRowFactory(tv ->
+        {
+            TableRow<ProductObject> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 2 && (!row.isEmpty())) {
+                    ProductObject rowData = row.getItem();
+                    System.out.println("Opening product page for " + rowData.getName());
+                }
+            });
+            return row;
+        });
     }
 }
