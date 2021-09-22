@@ -12,13 +12,17 @@ public class BuyerMainController {
     @FXML
     private void onViewCatalogue() {
         //TODO: insert view catalogue
+        Catalogue catalogue = new Catalogue();
+        try {
+            Stage stage = new Stage();
+            catalogue.start(stage);
+        } catch (Exception ignore) {}
     }
 
     @FXML
     private void onSearchProduct() {
         //TODO: insert search product
     }
-
     @FXML
     private void onSeeCart() {
         SeeCart dc = new SeeCart();
