@@ -42,7 +42,7 @@ public class ViewProductController {
     public TextField quantityText;
 
     @FXML
-    private void onAddToCart(){
+    private void onAddToCart() throws Exception {
         boolean inCart = false;
         int indexInCart = 0;
         if (Integer.parseInt(quantityText.getText()) > 0 && Integer.parseInt(quantityText.getText()) < dc.products[productIndex].getQuantityInStock()) {
@@ -55,6 +55,8 @@ public class ViewProductController {
                 }
             }
 
+            dc.products[productIndex].setQuantityInStock(dc.products[productIndex].getQuantityInStock() - Integer.parseInt(quantityText.getText()));
+
             if (inCart) {
                 int currentQuantity = cc.cart[indexInCart].getQuantity();
                 cc.cart[indexInCart].setQuantity(currentQuantity + Integer.parseInt(quantityText.getText()));
@@ -66,9 +68,11 @@ public class ViewProductController {
                 cc.cart[cc.numberCartItems].setQuantity(Integer.parseInt(quantityText.getText()));
             }
 
+            dc.updateDatabase(dc.numberProducts - 1);
+
             try {
                 cc.updateCart(cc.numberCartItems - 1);
-                //TODO: Insert Return Home Command
+                //TODO: Insert Return to Catalogue Command
             } catch (Exception ignore) {
             }
         }
@@ -78,7 +82,7 @@ public class ViewProductController {
 
     @FXML
     private void onHome() {
-        //TODO: Insert Return Home Command
+        //TODO: Insert Return to Catalogue Command
     }
 
     public void initialize() throws Exception {

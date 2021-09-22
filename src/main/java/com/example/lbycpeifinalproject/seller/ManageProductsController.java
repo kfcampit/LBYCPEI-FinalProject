@@ -12,7 +12,6 @@ public class ManageProductsController {
     private final DatabaseController dc = new DatabaseController();
     private int currentPage = 0;
     private int totalPages;
-    private ManageProducts mp = new ManageProducts();
 
     @FXML
     public Text id1, id2, id3, id4, id5, id6, id7, id8, id9, pageNum;
@@ -174,8 +173,8 @@ public class ManageProductsController {
     }
 
     private void removeButton(int i) {
-        for (int j = i; j < dc.numberProducts; j++) {
-            dc.products[i] = dc.products[i + 1];
+        for (int j = i + (currentPage * 9); j < dc.numberProducts; j++) {
+            dc.products[j] = dc.products[j + 1];
         }
         dc.products[dc.numberProducts - 1] = new ProductObject();
         dc.numberProducts--;
@@ -188,8 +187,6 @@ public class ManageProductsController {
             dc.updateDatabase(dc.numberProducts - 1);
         } catch (Exception ignored) {
         }
-
-
     }
 
     private void setVisibility(int i) {

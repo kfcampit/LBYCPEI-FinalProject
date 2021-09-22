@@ -35,7 +35,8 @@
 
 - Log-in / Register (RENZ) **[DONE]**
 - View Catalogue (MARCUS) **[DONE]**
-- Cart Page (KYLE)
+- View Product (KYLE) **[DONE]**
+- Cart Page (KYLE) **[DONE]**
 - Search for Product (RENZ)
 - View Catalogue (MARCUS) **[DONE]**
 - Manage Products (KYLE) **[DONE]**

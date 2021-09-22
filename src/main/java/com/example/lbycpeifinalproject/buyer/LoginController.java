@@ -16,13 +16,11 @@ public class LoginController {
     public Button loginAsBuyerButton;
     public TextField usernameField;
     public PasswordField passwordField;
-    // TODO: Implement actions on each login state.
     public void loginAsBuyerPressed(ActionEvent actionEvent) {
         String username = usernameField.getText();
         String password = passwordField.getText();
         if (Login.loginCredentials(username,password)){
             System.out.println("Login as buyer, success");
-            // TODO: Enter way to call other windows as Buyer.
             toBuyerMain();
         } else {
             System.out.println("Login failed");
@@ -33,7 +31,6 @@ public class LoginController {
         String password = passwordField.getText();
         if (Login.loginCredentials(username,password)){
             System.out.println("Login as seller, success");
-            // TODO: Enter way to call other windows as Seller.
             toSellerMain();
         } else {
             System.out.println("Login failed");

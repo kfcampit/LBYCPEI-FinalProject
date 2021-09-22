@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lbycpeifinalproject.buyer.SeeCartController">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ToolBar prefHeight="44.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#onHome" text="Home" />
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" onAction="#onCheckout" text="Checkout" textAlignment="CENTER" />
+              </items>
+            </ToolBar>
+            <AnchorPane prefHeight="356.0" prefWidth="600.0">
+               <children>
+                  <GridPane fx:id="gridPane" hgap="4.0" layoutY="2.0" prefHeight="319.0" prefWidth="565.0" vgap="4.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="240.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane layoutX="373.0" layoutY="35.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="remove1" alignment="CENTER" mnemonicParsing="false" onAction="#onRemove1" text="Remove" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="494.0" layoutY="35.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="remove2" alignment="CENTER" mnemonicParsing="false" onAction="#onRemove2" text="Remove" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="494.0" layoutY="62.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <Button fx:id="remove3" alignment="CENTER" mnemonicParsing="false" onAction="#onRemove3" text="Remove" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="494.0" layoutY="89.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <children>
+                              <Button fx:id="remove4" alignment="CENTER" mnemonicParsing="false" onAction="#onRemove4" text="Remove" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="494.0" layoutY="117.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                           <children>
+                              <Button fx:id="remove5" alignment="CENTER" mnemonicParsing="false" onAction="#onRemove5" text="Remove" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="494.0" layoutY="145.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                           <children>
+                              <Button fx:id="remove6" alignment="CENTER" mnemonicParsing="false" onAction="#onRemove6" text="Remove" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="494.0" layoutY="173.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                           <children>
+                              <Button fx:id="remove7" alignment="CENTER" mnemonicParsing="false" onAction="#onRemove7" text="Remove" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="494.0" layoutY="201.0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                           <children>
+                              <Button fx:id="remove8" alignment="CENTER" mnemonicParsing="false" onAction="#onRemove8" text="Remove" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <VBox alignment="CENTER" style="-fx-background-color: lightgray;">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NAME" textAlignment="CENTER" wrappingWidth="100.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" style="-fx-background-color: lightgray;" GridPane.columnIndex="1">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PRICE" textAlignment="CENTER" wrappingWidth="100.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="131.0" layoutY="10.0" style="-fx-background-color: lightgray;" GridPane.columnIndex="2">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUANTITY" textAlignment="CENTER" wrappingWidth="100.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="373.0" layoutY="10.0" style="-fx-background-color: lightgray;" GridPane.columnIndex="3">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="REMOVE" textAlignment="CENTER" wrappingWidth="80.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" GridPane.rowIndex="1">
+                           <children>
+                              <Text fx:id="name1" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" textAlignment="CENTER" visible="false" wrappingWidth="220.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="39.0" GridPane.rowIndex="2">
+                           <children>
+                              <Text fx:id="name2" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" textAlignment="CENTER" visible="false" wrappingWidth="220.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="68.0" GridPane.rowIndex="3">
+                           <children>
+                              <Text fx:id="name3" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" textAlignment="CENTER" visible="false" wrappingWidth="220.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="97.0" GridPane.rowIndex="4">
+                           <children>
+                              <Text fx:id="name4" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" textAlignment="CENTER" visible="false" wrappingWidth="220.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="127.0" GridPane.rowIndex="5">
+                           <children>
+                              <Text fx:id="name5" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" textAlignment="CENTER" visible="false" wrappingWidth="220.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="157.0" GridPane.rowIndex="6">
+                           <children>
+                              <Text fx:id="name6" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" textAlignment="CENTER" visible="false" wrappingWidth="220.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="187.0" GridPane.rowIndex="7">
+                           <children>
+                              <Text fx:id="name7" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" textAlignment="CENTER" visible="false" wrappingWidth="220.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="217.0" GridPane.rowIndex="8">
+                           <children>
+                              <Text fx:id="name8" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" textAlignment="CENTER" visible="false" wrappingWidth="220.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="217.0" style="-fx-background-color: lightgray;" GridPane.rowIndex="9">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL:" textAlignment="CENTER" wrappingWidth="220.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="307.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Text fx:id="price1" strokeType="OUTSIDE" strokeWidth="0.0" text="999.99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="121.0" layoutY="39.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Text fx:id="price2" strokeType="OUTSIDE" strokeWidth="0.0" text="999.99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="121.0" layoutY="68.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Text fx:id="price3" strokeType="OUTSIDE" strokeWidth="0.0" text="999.99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="121.0" layoutY="97.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <Text fx:id="price4" strokeType="OUTSIDE" strokeWidth="0.0" text="999.99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="121.0" layoutY="127.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <Text fx:id="price5" strokeType="OUTSIDE" strokeWidth="0.0" text="999.99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="121.0" layoutY="157.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <Text fx:id="price6" strokeType="OUTSIDE" strokeWidth="0.0" text="999.99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="121.0" layoutY="187.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <children>
+                              <Text fx:id="price7" strokeType="OUTSIDE" strokeWidth="0.0" text="999.99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="121.0" layoutY="217.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <children>
+                              <Text fx:id="price8" strokeType="OUTSIDE" strokeWidth="0.0" text="999.99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="121.0" layoutY="217.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <children>
+                              <Text fx:id="priceTotal" strokeType="OUTSIDE" strokeWidth="0.0" text="999.99" textAlignment="CENTER" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="121.0" layoutY="307.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Text fx:id="quantity1" strokeType="OUTSIDE" strokeWidth="0.0" text="99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="295.0" layoutY="39.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Text fx:id="quantity2" strokeType="OUTSIDE" strokeWidth="0.0" text="99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="295.0" layoutY="68.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <children>
+                              <Text fx:id="quantity3" strokeType="OUTSIDE" strokeWidth="0.0" text="99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="295.0" layoutY="97.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <children>
+                              <Text fx:id="quantity4" strokeType="OUTSIDE" strokeWidth="0.0" text="99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="295.0" layoutY="127.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                           <children>
+                              <Text fx:id="quantity5" strokeType="OUTSIDE" strokeWidth="0.0" text="99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="295.0" layoutY="157.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                           <children>
+                              <Text fx:id="quantity6" strokeType="OUTSIDE" strokeWidth="0.0" text="99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="295.0" layoutY="187.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                           <children>
+                              <Text fx:id="quantity7" strokeType="OUTSIDE" strokeWidth="0.0" text="99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="295.0" layoutY="217.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                           <children>
+                              <Text fx:id="quantity8" strokeType="OUTSIDE" strokeWidth="0.0" text="99" textAlignment="CENTER" visible="false" wrappingWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="-4.0" />
+               </VBox.margin></Separator>
+            <ToolBar layoutX="10.0" layoutY="10.0">
+               <items>
+                  <Button fx:id="prevPage" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onPrevPage" text="&lt;" />
+                  <Text fx:id="pageNum" strokeType="OUTSIDE" strokeWidth="0.0" text="1/10" textAlignment="CENTER" wrappingWidth="35.08203125" />
+                  <Button fx:id="nextPage" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onNextPage" text="&gt;" />
+               </items>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ToolBar>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

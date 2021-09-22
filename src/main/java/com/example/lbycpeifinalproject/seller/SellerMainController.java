@@ -12,7 +12,7 @@ public class SellerMainController {
 
     @FXML
     private void onViewCatalogue() {
-
+        //TODO: insert view catalogue.
     }
 
     @FXML
