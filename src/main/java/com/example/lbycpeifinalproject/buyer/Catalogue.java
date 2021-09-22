@@ -44,30 +44,34 @@ public class Catalogue extends Application {
         for(int i = (page-1)*6;i < (page*6);i++) {
             try {
                 //Product name
-                Text name = new Text(scene.getWidth()/2,30 + (i * 200),productinfo.products[i].getName());
+                Text name = new Text(scene.getWidth()/2,30 + (i * 230),productinfo.products[i].getName());
                 name.setTextAlignment(TextAlignment.CENTER);
                 name.setUnderline(true);
                 name.setFont(Font.font("Calibri", FontWeight.NORMAL, FontPosture.REGULAR, 30));
 
                 //Product picture
-                ImageView pic = new ImageView("file:assets/" + productinfo.products[i].getImageFileName());
-                pic.setX(30);
-                pic.setY(50 + (i * 150));
+                System.out.println(productinfo.products[i].getImageFileName()[0]);
+                ImageView pic = new ImageView("file:src/main/assets/product-images/" + productinfo.products[i].getImageFileName()[0]);
+                pic.setX(100);
+                pic.setY(30 + (i * 230));
+                pic.setFitHeight(180); pic.setFitWidth(180);
 
                 //Product description
-                Text desc = new Text(scene.getWidth()/2,50 + (i * 200),productinfo.products[i].getDescription());
+                Text desc = new Text(scene.getWidth()/2,50 + (i * 230),productinfo.products[i].getDescription());
                 desc.setTextAlignment(TextAlignment.RIGHT);
                 desc.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 14));
 
                 //Product Quantity, Price, and Rating
-                Text quantity = new Text(scene.getWidth()/2,150 + (i * 200),"Quantity Available:" + productinfo.products[i].getQuantityInStock());
+                Text quantity = new Text(scene.getWidth()/2,150 + (i * 230),"Quantity Available:" + productinfo.products[i].getQuantityInStock());
                 quantity.setTextAlignment(TextAlignment.RIGHT);
-                Text price = new Text(scene.getWidth()/2,165 + (i * 200),"PHP" + productinfo.products[i].getPrice());
+                Text price = new Text(scene.getWidth()/2,165 + (i * 230),"PHP" + productinfo.products[i].getPrice());
                 price.setTextAlignment(TextAlignment.RIGHT);
-                Text rating = new Text(scene.getWidth()/2,180 + (i * 200),productinfo.products[i].getRating() + "/5");
+                Text rating = new Text(scene.getWidth()/2,180 + (i * 230),productinfo.products[i].getRating() + "/5");
                 rating.setTextAlignment(TextAlignment.RIGHT);
-                Line border = new Line(0,190+(i*200),scene.getWidth(),190+(i*200));
+                Line border = new Line(0,230+(i*230),scene.getWidth(),230+(i*230));
                 Text pagenumber = new Text(scene.getWidth()-100,scene.getHeight()-35,"Page "+page);
+
+                addButton(i);
 
                 pane.getChildren().add(name);
                 pane.getChildren().add(pic);
@@ -135,4 +139,22 @@ public class Catalogue extends Application {
         return max;
     }
 
+    public void addButton(int i){
+        ViewProduct viewProduct = new ViewProduct();
+        Button view = new Button("View Product");
+        view.setLayoutX(scene.getWidth()/2); view.setLayoutY(185 + (i * 230));
+        view.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Stage stage = new Stage();
+                viewProduct.setProductIndex(i);
+                try {
+                    viewProduct.start(stage);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        pane.getChildren().add(view);
+    }
 }
