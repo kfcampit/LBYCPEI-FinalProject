@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="220.0" prefWidth="600.0">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="600.0">
+              <items>
+                  <TextField fx:id="searchField" prefHeight="25.0" prefWidth="207.0" promptText="Search" />
+                <Button fx:id="searchButton" mnemonicParsing="false" text="Search" />
+                  <Button fx:id="homeButton" mnemonicParsing="false" text="Home" translateX="255.0" />
+              </items>
+            </ToolBar>
+            <ImageView fx:id="productImage1" accessibleText="Product Image" fitHeight="150.0" fitWidth="150.0" layoutX="14.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="14.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="150.0" />
+            <ImageView fx:id="productImage11" accessibleText="Product Image" fitHeight="150.0" fitWidth="150.0" layoutX="225.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="225.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="150.0" />
+            <ImageView fx:id="productImage111" accessibleText="Product Image" fitHeight="150.0" fitWidth="150.0" layoutX="436.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="436.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="150.0" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
