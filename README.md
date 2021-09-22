@@ -34,7 +34,7 @@
 **Division of Tasks**
 
 - Log-in / Register (RENZ) **[DONE | Implement call methods to other program]**
-- View Catalogue (MARCUS)
+- View Catalogue (MARCUS)**[DONE]**
 - Cart Page (MARCUS)
 - Search for Product (RENZ)
 - View Catalogue (MARCUS)
