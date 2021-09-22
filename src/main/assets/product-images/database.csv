@@ -1,4 +1,3 @@
 "PRODUCT_ID","PRODUCT_NAME","PRODUCT_PRICE","QUANTITY_IN_STOCK","IMAGE_FILE_NAME","PRODUCT_DESC","PRODUCT_CATEG","PRODUCT_RATING"
-"101","Mouse","99.99","12","102.png;;;","this is product a description","A;  B;  C","99.99"
+"101","product A","99.99","12","101.png","this is product a description","A;B;C","99.99"
 "103","product C","1999.99","47","103.png","this is product c description","A;D","1999.99"
-"104","Product B","199.0","19","","Hello this is product B","B","199.0"

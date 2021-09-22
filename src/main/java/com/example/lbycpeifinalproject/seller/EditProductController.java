@@ -124,7 +124,6 @@ public class EditProductController {
             double price = Double.parseDouble(inputPrice.getText());
             int quantity = Integer.parseInt(inputQuantity.getText());
 
-            dc.products[productIndex] = new ProductObject();
             dc.products[productIndex].setImageFileName(imageName);
             dc.products[productIndex].setName(name);
             dc.products[productIndex].setPrice(price);
@@ -132,7 +131,7 @@ public class EditProductController {
             dc.products[productIndex].setDescription(description);
             dc.products[productIndex].setCategory(categories);
 
-            dc.updateDatabase(dc.numberProducts);
+            dc.updateDatabase(dc.numberProducts - 1);
 
             ManageProducts mp = new ManageProducts();
             errorMessage.getScene().getWindow().hide();

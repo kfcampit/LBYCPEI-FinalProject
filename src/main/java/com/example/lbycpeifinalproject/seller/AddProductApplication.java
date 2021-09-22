@@ -7,8 +7,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class AddProductApplication extends Application {
-    private static int productIndex;
-    private static boolean isAdd = false;
 
     @Override
     public void start(Stage stage) throws Exception {
