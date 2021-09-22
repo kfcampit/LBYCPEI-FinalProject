@@ -1,6 +1,5 @@
 package com.example.lbycpeifinalproject.buyer;
 
-import com.example.lbycpeifinalproject.HelloApplication;
 import com.example.lbycpeifinalproject.MainHandler;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
@@ -18,7 +17,7 @@ public class Login extends Application {
     protected static HashMap<String,String> userCredentials = new HashMap<>();
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("buyer/login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainHandler.class.getResource("buyer/login.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Login to Chopee");
         stage.setScene(scene);

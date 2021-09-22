@@ -33,10 +33,10 @@
 
 **Division of Tasks**
 
-- Log-in / Register (RENZ) **[DONE | Implement call methods to other program]**
-- View Catalogue (MARCUS)**[DONE]**
+- Log-in / Register (RENZ) **[DONE]**
+- View Catalogue (MARCUS) **[DONE]**
 - Cart Page (KYLE)
 - Search for Product (RENZ)
-- View Catalogue (MARCUS)**[DONE]**
-- Manage Products (KYLE)
+- View Catalogue (MARCUS) **[DONE]**
+- Manage Products (KYLE) **[DONE]**
 - Database (KYLE) **[DONE]**

@@ -1,6 +1,6 @@
 package com.example.lbycpeifinalproject.buyer;
 
-import com.example.lbycpeifinalproject.HelloApplication;
+import com.example.lbycpeifinalproject.MainHandler;
 import com.example.lbycpeifinalproject.misc.DatabaseController;
 import com.example.lbycpeifinalproject.misc.ProductObject;
 import javafx.application.Application;
@@ -15,7 +15,7 @@ public class SearchForProduct extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         dc.loadDatabase();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("buyer/search-product.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainHandler.class.getResource("buyer/search-product.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Chopee - Search");
         stage.setScene(scene);

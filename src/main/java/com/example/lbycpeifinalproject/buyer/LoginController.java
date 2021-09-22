@@ -1,5 +1,6 @@
 package com.example.lbycpeifinalproject.buyer;
 
+import com.example.lbycpeifinalproject.seller.SellerMain;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -22,6 +23,7 @@ public class LoginController {
         if (Login.loginCredentials(username,password)){
             System.out.println("Login as buyer, success");
             // TODO: Enter way to call other windows as Buyer.
+            toBuyerMain();
         } else {
             System.out.println("Login failed");
         }
@@ -32,6 +34,7 @@ public class LoginController {
         if (Login.loginCredentials(username,password)){
             System.out.println("Login as seller, success");
             // TODO: Enter way to call other windows as Seller.
+            toSellerMain();
         } else {
             System.out.println("Login failed");
         }
@@ -49,6 +52,30 @@ public class LoginController {
         } else {
             usernameField.setPromptText("Username already exists!");
             passwordField.setPromptText("Login or choose a new username");
+        }
+    }
+
+    private void toSellerMain() {
+        SellerMain sm = new SellerMain();
+        registerButton.getScene().getWindow().hide();
+
+        try {
+            Stage stage = new Stage();
+            sm.start(stage);
+        } catch (Exception ignore) {
+
+        }
+    }
+
+    private void toBuyerMain() {
+        BuyerMain bm = new BuyerMain();
+        registerButton.getScene().getWindow().hide();
+
+        try {
+            Stage stage = new Stage();
+            bm.start(stage);
+        } catch (Exception ignore) {
+
         }
     }
 }

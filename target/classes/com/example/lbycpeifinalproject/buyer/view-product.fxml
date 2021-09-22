@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lbycpeifinalproject.buyer.ViewProductController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox style="-fx-background-color: #ffcc75;">
+               <children>
+                  <ImageView fx:id="productImage" fitHeight="240.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets bottom="8.0" left="32.0" right="32.0" top="32.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <AnchorPane prefHeight="240.0" prefWidth="264.0">
+                     <HBox.margin>
+                        <Insets right="32.0" top="32.0" />
+                     </HBox.margin>
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" textAlignment="CENTER" wrappingWidth="264.0">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="16.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox>
+                                 <VBox.margin>
+                                    <Insets bottom="8.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price:">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="priceText" strokeType="OUTSIDE" strokeWidth="0.0" text="stock">
+                                       <font>
+                                          <Font name="Century Gothic" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <VBox.margin>
+                                    <Insets bottom="8.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stock:">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="stockText" layoutX="95.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="stock">
+                                       <font>
+                                          <Font name="Century Gothic" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categories:">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="categoriesText" strokeType="OUTSIDE" strokeWidth="0.0" text="categs" wrappingWidth="154.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="16.0" />
+                                 </padding>
+                              </HBox>
+                              <AnchorPane prefHeight="25.0" prefWidth="263.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <TextField fx:id="quantityText" prefHeight="25.0" prefWidth="80.0" promptText="Quantity">
+                                             <HBox.margin>
+                                                <Insets right="4.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Button fx:id="addToCartButton" alignment="CENTER" mnemonicParsing="false" onAction="#onAddToCart" text="Add to Cart">
+                                             <HBox.margin>
+                                                <Insets left="4.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="157.0">
+                                 <children>
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#onHome" text="Home" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Product Description:">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="16.0" top="8.0" />
+               </VBox.margin>
+            </Text>
+            <AnchorPane>
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+               <children>
+                  <Text fx:id="descriptionText" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCT DESCRIPTION HERE" wrappingWidth="536.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

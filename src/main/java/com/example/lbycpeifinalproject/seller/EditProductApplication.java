@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 
 public class EditProductApplication extends Application {
     private static int productIndex;
-    private static boolean isAdd = false;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -26,12 +25,6 @@ public class EditProductApplication extends Application {
 
     public void setProductIndex(int productIndex) {
         EditProductApplication.productIndex = productIndex;
-    }
-
-    public static boolean getAdd() {return isAdd;}
-
-    public void setAddTrue() {
-        isAdd = true;
     }
 
     public static void main(String[] args) {

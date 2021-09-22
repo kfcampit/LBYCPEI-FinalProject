@@ -33,7 +33,7 @@ public class DatabaseController {
 
     }
 
-    public List<String[]> readAll(Reader reader) throws Exception {
+    private List<String[]> readAll(Reader reader) throws Exception {
         CSVParser parser = new CSVParserBuilder()
                 .withSeparator(',')
                 .withIgnoreQuotations(false)
