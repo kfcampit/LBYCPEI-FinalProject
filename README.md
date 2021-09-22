@@ -35,8 +35,8 @@
 
 - Log-in / Register (RENZ) **[DONE | Implement call methods to other program]**
 - View Catalogue (MARCUS)**[DONE]**
-- Cart Page (MARCUS)
+- Cart Page (KYLE)
 - Search for Product (RENZ)
-- View Catalogue (MARCUS)
+- View Catalogue (MARCUS)**[DONE]**
 - Manage Products (KYLE)
 - Database (KYLE) **[DONE]**
