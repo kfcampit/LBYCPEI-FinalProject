@@ -11,8 +11,9 @@ public class BuyerMainController {
 
     @FXML
     private void onViewCatalogue() {
-        //TODO: insert view catalogue
         Catalogue catalogue = new Catalogue();
+        viewCatalogueButton.getScene().getWindow().hide();
+
         try {
             Stage stage = new Stage();
             catalogue.start(stage);
@@ -21,8 +22,9 @@ public class BuyerMainController {
 
     @FXML
     private void onSearchProduct() {
-        //TODO: insert search product
         SearchForProduct sfp = new SearchForProduct();
+        viewCatalogueButton.getScene().getWindow().hide();
+
         try {
             Stage stage = new Stage();
             sfp.start(stage);
