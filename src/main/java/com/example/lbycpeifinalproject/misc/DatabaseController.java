@@ -8,7 +8,7 @@ import java.util.*;
 
 public class DatabaseController {
 
-    private final int MAX_NUM = 100;
+    public final int MAX_NUM = 100;
     public int numberProducts;
     public ProductObject[] products = new ProductObject[MAX_NUM];
 
@@ -52,7 +52,7 @@ public class DatabaseController {
         return list;
     }
 
-    public void updateDatabase() throws Exception {
+    public void updateDatabase(int n) throws Exception {
         CSVWriter writer = new CSVWriter(new FileWriter("src/main/assets/database.csv"));
         String[] line = new String[8];
         List<String[]> stringArray = new ArrayList<>(Collections.emptyList());
@@ -68,7 +68,7 @@ public class DatabaseController {
                 "PRODUCT_RATING"
         });
 
-        for (int i = 0; i < numberProducts; i++) {
+        for (int i = 0; i < n + 1; i++) {
             line = new String[8];
             line[0] = String.valueOf(products[i].getId());
             line[1] = products[i].getName();

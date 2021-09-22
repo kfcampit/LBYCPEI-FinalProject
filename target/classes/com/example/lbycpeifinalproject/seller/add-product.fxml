@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lbycpeifinalproject.seller.EditProductController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lbycpeifinalproject.seller.AddProductController">
    <children>
       <HBox>
          <children>
@@ -95,7 +95,7 @@
             </VBox>
             <VBox>
                <children>
-                  <Text fx:id="editManageProduct" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Product" textAlignment="CENTER" wrappingWidth="368">
+                  <Text fx:id="editManageProduct" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Product" textAlignment="CENTER" wrappingWidth="368">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>

@@ -26,14 +26,14 @@
 - String name
 - double price
 - int quantityInStock
-- String imageFileName
+- String[] imageFileName
 - String description
 - String[] category
 - double rating
 
 **Division of Tasks**
 
-- Log-in / Register (RENZ)
+- Log-in / Register (RENZ) **[DONE | Implement call methods to other program]**
 - View Catalogue (MARCUS)
 - Cart Page (MARCUS)
 - Search for Product (RENZ)

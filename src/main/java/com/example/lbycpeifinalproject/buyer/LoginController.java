@@ -1,23 +1,37 @@
 package com.example.lbycpeifinalproject.buyer;
 
+import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class LoginController {
     @FXML
     public Button registerButton;
-    public Button loginButton;
+    public Button loginAsBuyerButton;
     public TextField usernameField;
     public PasswordField passwordField;
-    public void loginPressed(ActionEvent actionEvent) {
+    // TODO: Implement actions on each login state.
+    public void loginAsBuyerPressed(ActionEvent actionEvent) {
         String username = usernameField.getText();
         String password = passwordField.getText();
-        // TODO: Implement actions on each login state.
         if (Login.loginCredentials(username,password)){
-            System.out.println("Login success");
+            System.out.println("Login as buyer, success");
+            // TODO: Enter way to call other windows as Buyer.
+        } else {
+            System.out.println("Login failed");
+        }
+    }
+    public void loginAsSellerPressed(ActionEvent actionEvent) {
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+        if (Login.loginCredentials(username,password)){
+            System.out.println("Login as seller, success");
+            // TODO: Enter way to call other windows as Seller.
         } else {
             System.out.println("Login failed");
         }

@@ -5,7 +5,6 @@ import com.example.lbycpeifinalproject.MainHandler;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import javafx.application.Application;
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -21,7 +20,7 @@ public class Login extends Application {
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("buyer/login.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
+        stage.setTitle("Login to Chopee");
         stage.setScene(scene);
         stage.show();
 
