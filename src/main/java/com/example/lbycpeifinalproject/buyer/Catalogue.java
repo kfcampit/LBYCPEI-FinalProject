@@ -50,7 +50,6 @@ public class Catalogue extends Application {
                 name.setFont(Font.font("Calibri", FontWeight.NORMAL, FontPosture.REGULAR, 30));
 
                 //Product picture
-                System.out.println(productinfo.products[i].getImageFileName()[0]);
                 ImageView pic = new ImageView("file:src/main/assets/product-images/" + productinfo.products[i].getImageFileName()[0]);
                 pic.setX(100);
                 pic.setY(30 + (i * 230));
@@ -66,8 +65,8 @@ public class Catalogue extends Application {
                 quantity.setTextAlignment(TextAlignment.RIGHT);
                 Text price = new Text(scene.getWidth()/2,165 + (i * 230),"PHP" + productinfo.products[i].getPrice());
                 price.setTextAlignment(TextAlignment.RIGHT);
-                Text rating = new Text(scene.getWidth()/2,180 + (i * 230),productinfo.products[i].getRating() + "/5");
-                rating.setTextAlignment(TextAlignment.RIGHT);
+//                Text rating = new Text(scene.getWidth()/2,180 + (i * 230),productinfo.products[i].getRating() + "/5");
+//                rating.setTextAlignment(TextAlignment.RIGHT);
                 Line border = new Line(0,230+(i*230),scene.getWidth(),230+(i*230));
                 Text pagenumber = new Text(scene.getWidth()-100,scene.getHeight()-35,"Page "+page);
 
@@ -78,12 +77,44 @@ public class Catalogue extends Application {
                 pane.getChildren().add(desc);
                 pane.getChildren().add(quantity);
                 pane.getChildren().add(price);
-                pane.getChildren().add(rating);
+//                pane.getChildren().add(rating);
                 pane.getChildren().add(border);
                 pane.getChildren().add(pagenumber);
 
             } catch (Exception e) {break;}
         }
+        BuyerMain buyermain = new BuyerMain();
+        Button home = new Button("Home");
+        home.setLayoutX(10); home.setLayoutY(scene.getHeight()-50);
+        home.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Stage stage = new Stage();
+                try {
+                    home.getScene().getWindow().hide();
+                    buyermain.start(stage);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        Button refresh = new Button("Refresh");
+        refresh.setLayoutX(80); refresh.setLayoutY(scene.getHeight()-50);
+        refresh.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Stage stage = new Stage();
+                try {
+                    pStage.setScene(ProductDetails());
+                    pStage.show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        pane.getChildren().add(refresh);
+        pane.getChildren().add(home);
 
         return scene;
     }
