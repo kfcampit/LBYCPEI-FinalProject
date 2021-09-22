@@ -4,13 +4,17 @@ import com.example.lbycpeifinalproject.misc.ProductObject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import java.util.Locale;
 import java.util.Objects;
+import java.util.stream.IntStream;
 
 public class SearchForProductController {
     @FXML public Button searchButton;
@@ -57,16 +61,29 @@ public class SearchForProductController {
     }
 
     public void goToItem(MouseEvent mouseEvent) {
-        tableView.setRowFactory(tv ->
-        {
-            TableRow<ProductObject> row = new TableRow<>();
-            row.setOnMouseClicked(event -> {
-                if (event.getClickCount() == 2 && (!row.isEmpty())) {
-                    ProductObject rowData = row.getItem();
-                    System.out.println("Opening product page for " + rowData.getName());
+        tableView.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.isPrimaryButtonDown() && event.getClickCount() == 2) {
+                    ProductObject selectedNode = tableView.getSelectionModel().getSelectedItem();
+                    if (selectedNode != null){
+                        ViewProduct vp = new ViewProduct();
+                        tableView.getScene().getWindow().hide();
+                        int productIndex = 0;
+
+                        for (int i = 0; i < SearchForProduct.dc.numberProducts; i++){
+                            if (SearchForProduct.dc.products[i].getId() == selectedNode.getId()){productIndex = i;}
+                        }
+
+                        try {
+                            Stage stage = new Stage();
+                            vp.setProductIndex(productIndex);
+                            vp.start(stage);
+                        } catch (Exception ignore) {
+                        }
+                    }
                 }
-            });
-            return row;
+            }
         });
     }
 }
