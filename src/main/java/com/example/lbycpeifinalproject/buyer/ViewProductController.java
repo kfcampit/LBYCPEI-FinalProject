@@ -3,8 +3,6 @@ package com.example.lbycpeifinalproject.buyer;
 import com.example.lbycpeifinalproject.misc.CartController;
 import com.example.lbycpeifinalproject.misc.CartObject;
 import com.example.lbycpeifinalproject.misc.DatabaseController;
-import com.example.lbycpeifinalproject.seller.ManageProducts;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -45,19 +43,34 @@ public class ViewProductController {
 
     @FXML
     private void onAddToCart(){
+        boolean inCart = false;
+        int indexInCart = 0;
         if (Integer.parseInt(quantityText.getText()) > 0 && Integer.parseInt(quantityText.getText()) < dc.products[productIndex].getQuantityInStock()) {
-            cc.cart[cc.numberCartItems] = new CartObject();
-            cc.cart[cc.numberCartItems].setId(dc.products[productIndex].getId());
-            cc.cart[cc.numberCartItems].setQuantity(Integer.parseInt(quantityText.getText()));
 
-            try {
-                cc.updateCart(cc.numberCartItems);
-                Platform.exit();
-            } catch (Exception ignore) {
-
+            for (int i = 0; i < cc.numberCartItems ; i++) {
+                if (cc.cart[i].getId() == dc.products[productIndex].getId()) {
+                    indexInCart = i;
+                    inCart = true;
+                    break;
+                }
             }
 
-            //TODO: Insert Return Home Command
+            if (inCart) {
+                int currentQuantity = cc.cart[indexInCart].getQuantity();
+                cc.cart[indexInCart].setQuantity(currentQuantity + Integer.parseInt(quantityText.getText()));
+                System.out.println(cc.cart[indexInCart].getId());
+                System.out.println(currentQuantity + Integer.parseInt(quantityText.getText()));
+            } else {
+                cc.cart[cc.numberCartItems] = new CartObject();
+                cc.cart[cc.numberCartItems].setId(dc.products[productIndex].getId());
+                cc.cart[cc.numberCartItems].setQuantity(Integer.parseInt(quantityText.getText()));
+            }
+
+            try {
+                cc.updateCart(cc.numberCartItems - 1);
+                //TODO: Insert Return Home Command
+            } catch (Exception ignore) {
+            }
         }
 
 
