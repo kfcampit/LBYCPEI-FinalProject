@@ -3,12 +3,14 @@ package com.example.lbycpeifinalproject.buyer;
 import com.example.lbycpeifinalproject.misc.CartController;
 import com.example.lbycpeifinalproject.misc.CartObject;
 import com.example.lbycpeifinalproject.misc.DatabaseController;
+import com.example.lbycpeifinalproject.seller.ManageProducts;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.File;
 
@@ -72,7 +74,23 @@ public class ViewProductController {
 
             try {
                 cc.updateCart(cc.numberCartItems - 1);
-                //TODO: Insert Return to Catalogue Command
+                addToCartButton.getScene().getWindow().hide();
+                if (ViewProduct.getFromSearch()) {
+                    SearchForProduct sfp = new SearchForProduct();
+
+                    try {
+                        Stage stage = new Stage();
+                        sfp.start(stage);
+                    } catch (Exception ignore) {
+                    }
+                } else {
+                    Catalogue c = new Catalogue();
+                    try {
+                        Stage stage = new Stage();
+                        c.start(stage);
+                    } catch (Exception ignore) {
+                    }
+                }
             } catch (Exception ignore) {
             }
         }
@@ -82,7 +100,24 @@ public class ViewProductController {
 
     @FXML
     private void onHome() {
-        //TODO: Insert Return to Catalogue Command
+        addToCartButton.getScene().getWindow().hide();
+        if (ViewProduct.getFromSearch()) {
+            SearchForProduct sfp = new SearchForProduct();
+
+            try {
+                Stage stage = new Stage();
+                sfp.start(stage);
+            } catch (Exception ignore) {
+            }
+        } else {
+            Catalogue c = new Catalogue();
+            try {
+                Stage stage = new Stage();
+                c.start(stage);
+            } catch (Exception ignore) {
+            }
+        }
+
     }
 
     public void initialize() throws Exception {

@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 public class ViewProduct extends Application {
     private static int productIndex = 1;
+    private static boolean fromSearch = false;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -17,6 +18,14 @@ public class ViewProduct extends Application {
         stage.setTitle("View Product");
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void setFromSearch(boolean fromSearch) {
+        ViewProduct.fromSearch = fromSearch;
+    }
+
+    public static boolean getFromSearch() {
+        return fromSearch;
     }
 
     public static int getProductIndex() {
