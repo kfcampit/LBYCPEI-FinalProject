@@ -8,17 +8,12 @@ import javafx.stage.Stage;
 
 public class SellerMainController {
     @FXML
-    public Button viewCatalogue;
-
-    @FXML
-    private void onViewCatalogue() {
-        //TODO: insert view catalogue.
-    }
+    public Button manageProducts;
 
     @FXML
     private void onManageProducts() {
         ManageProducts mp = new ManageProducts();
-        viewCatalogue.getScene().getWindow().hide();
+        manageProducts.getScene().getWindow().hide();
 
         try {
             Stage stage = new Stage();

@@ -79,6 +79,7 @@ public class SearchForProductController {
                         try {
                             Stage stage = new Stage();
                             vp.setProductIndex(productIndex);
+                            vp.setFromSearch(true);
                             vp.start(stage);
                         } catch (Exception ignore) {
                         }
