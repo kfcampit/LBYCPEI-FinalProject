@@ -22,6 +22,11 @@ public class BuyerMainController {
     @FXML
     private void onSearchProduct() {
         //TODO: insert search product
+        SearchForProduct sfp = new SearchForProduct();
+        try {
+            Stage stage = new Stage();
+            sfp.start(stage);
+        } catch (Exception ignore) {}
     }
     @FXML
     private void onSeeCart() {
