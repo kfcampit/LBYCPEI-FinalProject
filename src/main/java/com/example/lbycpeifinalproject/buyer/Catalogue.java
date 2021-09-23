@@ -39,9 +39,9 @@ public class Catalogue extends Application {
         productinfo.loadDatabase();
         pane = new Pane();
         pane.setPadding(new Insets(8, 8, 8, 8));
-        scene = new Scene(pane,1000,1250);
+        scene = new Scene(pane,600,750);
         page = getPage(getMaxPage(productinfo));
-        for(int i = (page-1)*6;i < (page*6);i++) {
+        for(int i = (page-1)*3;i < (page*3);i++) {
             try {
                 //Product name
                 Text name = new Text(scene.getWidth()/2,30 + (i * 230),productinfo.products[i].getName());
@@ -166,7 +166,8 @@ public class Catalogue extends Application {
                 max++;
             }catch (Exception e){break;}
         }
-        max = Math.floorDiv(max,6)+1;
+        if (max%3==0)max = Math.floorDiv(max,3);
+        else max = Math.floorDiv(max,3) + 1;
         return max;
     }
 
