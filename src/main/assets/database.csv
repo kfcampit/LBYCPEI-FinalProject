@@ -1,4 +1,4 @@
 "PRODUCT_ID","PRODUCT_NAME","PRODUCT_PRICE","QUANTITY_IN_STOCK","IMAGE_FILE_NAME","PRODUCT_DESC","PRODUCT_CATEG","PRODUCT_RATING"
-"101","product A","99.99","8","101.png","this is product a description","A;B;C","99.99"
-"102","product B","109.99","77","102.png","this is product b description","B;C","109.99"
+"101","RTX 3090","100900.0","8","101.png","This is a graphics card","A;    B;    C","100900.0"
 "103","product C","1999.99","47","103.png","this is product c description","A;D","1999.99"
+"104","Mouse","99.0","10","102.png;;;","dfasfasdf","A","0.0"
