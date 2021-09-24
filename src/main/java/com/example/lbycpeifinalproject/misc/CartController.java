@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -59,13 +60,14 @@ public class CartController {
                 "QUANTITY",
         });
 
-        for (int i = 0; i < n + 1; i++) {
+        for (int i = 0; i <= n; i++) {
             line = new String[2];
             line[0] = String.valueOf(cart[i].getId());
             line[1] = String.valueOf(cart[i].getQuantity());
 
             stringArray.add(line);
         }
+
         writer.writeAll(stringArray);
         writer.close();
     }

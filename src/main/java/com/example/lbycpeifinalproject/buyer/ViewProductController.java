@@ -71,9 +71,9 @@ public class ViewProductController {
             }
 
             dc.updateDatabase(dc.numberProducts - 1);
+            cc.updateCart(cc.numberCartItems);
 
             try {
-                cc.updateCart(cc.numberCartItems - 1);
                 addToCartButton.getScene().getWindow().hide();
                 if (ViewProduct.getFromSearch()) {
                     SearchForProduct sfp = new SearchForProduct();
@@ -81,13 +81,6 @@ public class ViewProductController {
                     try {
                         Stage stage = new Stage();
                         sfp.start(stage);
-                    } catch (Exception ignore) {
-                    }
-                } else {
-                    Catalogue c = new Catalogue();
-                    try {
-                        Stage stage = new Stage();
-                        c.start(stage);
                     } catch (Exception ignore) {
                     }
                 }

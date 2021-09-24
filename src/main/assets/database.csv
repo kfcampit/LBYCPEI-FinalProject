@@ -1,4 +1,4 @@
 "PRODUCT_ID","PRODUCT_NAME","PRODUCT_PRICE","QUANTITY_IN_STOCK","IMAGE_FILE_NAME","PRODUCT_DESC","PRODUCT_CATEG","PRODUCT_RATING"
-"101","RTX 3090","100900.0","8","101.png","This is a graphics card","A;    B;    C","100900.0"
-"103","product C","1999.99","47","103.png","this is product c description","A;D","1999.99"
-"104","Mouse","99.0","10","102.png;;;","dfasfasdf","A","0.0"
+"101","RTX 3090","100900.0","5","101.png","This is a graphics card","A;    B;    C","100900.0"
+"103","product C","1999.99","32","103.png","this is product c description","A;D","1999.99"
+"104","Mouse","99.0","6","102.png","dfasfasdf","A","99.0"
