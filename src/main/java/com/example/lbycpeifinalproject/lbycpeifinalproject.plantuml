@@ -1,0 +1,576 @@
+@startuml
+
+title __LBYCPEIFINALPROJECT's Class Diagram__\n
+
+namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.BuyerMain {
+            + start()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.BuyerMainController {
+            + viewCatalogueButton : Button
+            - onExit()
+            - onSearchProduct()
+            - onSeeCart()
+            - onViewCatalogue()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.Catalogue {
+            {static} + pStage : Stage
+            + pane : Pane
+            + scene : Scene
+            - page : int
+            + ProductDetails()
+            + addButton()
+            + getMaxPage()
+            + getPage()
+            {static} + main()
+            + start()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.Checkout {
+            {static} - finalPrice : double
+            {static} + getFinalPrice()
+            + setFinalPrice()
+            + start()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.CheckoutController {
+            + finalPrice : Text
+            + initialize()
+            + onHome()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.Login {
+            {static} # userCredentials : HashMap<String, String>
+            {static} + main()
+            + start()
+            {static} # loginCredentials()
+            {static} # registerCredentials()
+            - getCredentialsCSV()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.LoginController {
+            + loginAsBuyerButton : Button
+            + passwordField : PasswordField
+            + registerButton : Button
+            + usernameField : TextField
+            + loginAsBuyerPressed()
+            + loginAsSellerPressed()
+            + registerPressed()
+            - toBuyerMain()
+            - toSellerMain()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.SearchForProduct {
+            {static} ~ dc : DatabaseController
+            {static} + main()
+            + start()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.SearchForProductController {
+            + homeButton : Button
+            + nameColumn : TableColumn<ProductObject, String>
+            + priceColumn : TableColumn<ProductObject, Double>
+            + ratingColumn : TableColumn<ProductObject, Double>
+            + searchButton : Button
+            + searchField : TextField
+            + stocksColumn : TableColumn<ProductObject, Integer>
+            + tableView : TableView<ProductObject>
+            + OnHomePressed()
+            + OnSearchPressed()
+            + goToItem()
+            - getItemDetails()
+            - setTable()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.SeeCart {
+            + start()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.SeeCartController {
+            + name1 : Text
+            + name2 : Text
+            + name3 : Text
+            + name4 : Text
+            + name5 : Text
+            + name6 : Text
+            + name7 : Text
+            + name8 : Text
+            + nextPage : Button
+            + pageNum : Text
+            + prevPage : Button
+            + price1 : Text
+            + price2 : Text
+            + price3 : Text
+            + price4 : Text
+            + price5 : Text
+            + price6 : Text
+            + price7 : Text
+            + price8 : Text
+            + priceTotal : Text
+            + quantity1 : Text
+            + quantity2 : Text
+            + quantity3 : Text
+            + quantity4 : Text
+            + quantity5 : Text
+            + quantity6 : Text
+            + quantity7 : Text
+            + quantity8 : Text
+            + remove1 : Button
+            + remove2 : Button
+            + remove3 : Button
+            + remove4 : Button
+            + remove5 : Button
+            + remove6 : Button
+            + remove7 : Button
+            + remove8 : Button
+            - currentPage : int
+            - totalNumPrice : double
+            - totalPages : int
+            + initialize()
+            + onCheckout()
+            + onNextPage()
+            + onPrevPage()
+            + onRemove1()
+            + onRemove2()
+            + onRemove3()
+            + onRemove4()
+            + onRemove5()
+            + onRemove6()
+            + onRemove7()
+            + onRemove8()
+            - getIndexfromID()
+            - initContent()
+            - onHome()
+            - removeButton()
+            - setVisibility()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.ViewProduct {
+            {static} - fromSearch : boolean
+            {static} - productIndex : int
+            {static} + getFromSearch()
+            {static} + getProductIndex()
+            + setFromSearch()
+            + setProductIndex()
+            + start()
+        }
+      }
+    }
+
+
+    namespace com.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.ViewProductController {
+            + addToCartButton : Button
+            + categoriesText : Text
+            + descriptionText : Text
+            + nameText : Text
+            + priceText : Text
+            + productImage : ImageView
+            + quantityText : TextField
+            + stockText : Text
+            - productIndex : int
+            + initialize()
+            - onAddToCart()
+            - onHome()
+        }
+      }
+    }
+
+    namespace com.example.lbycpeifinalproject {
+          namespace misc {
+            class com.example.lbycpeifinalproject.misc.CartController {
+                + MAX_NUM : int
+                + cart : CartObject[]
+                + numberCartItems : int
+                + loadCart()
+                + updateCart()
+                - readAll()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace misc {
+            interface com.example.lbycpeifinalproject.misc.CartInterface {
+                {abstract} + getId()
+                {abstract} + getQuantity()
+                {abstract} + setId()
+                {abstract} + setQuantity()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace misc {
+            class com.example.lbycpeifinalproject.misc.CartObject {
+                - id : int
+                - quantity : int
+                + getId()
+                + getQuantity()
+                + setId()
+                + setQuantity()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace misc {
+            class com.example.lbycpeifinalproject.misc.DatabaseController {
+                + MAX_NUM : int
+                + numberProducts : int
+                + products : ProductObject[]
+                + loadDatabase()
+                + updateDatabase()
+                - readAll()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace misc {
+            interface com.example.lbycpeifinalproject.misc.ProductInterface {
+                {abstract} + getCategory()
+                {abstract} + getDescription()
+                {abstract} + getId()
+                {abstract} + getImageFileName()
+                {abstract} + getName()
+                {abstract} + getPrice()
+                {abstract} + getQuantityInStock()
+                {abstract} + getRating()
+                {abstract} + setCategory()
+                {abstract} + setDescription()
+                {abstract} + setId()
+                {abstract} + setImageFileName()
+                {abstract} + setName()
+                {abstract} + setPrice()
+                {abstract} + setQuantityInStock()
+                {abstract} + setRating()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace misc {
+            class com.example.lbycpeifinalproject.misc.ProductObject {
+                + category : String[]
+                + imageFileName : String[]
+                - description : String
+                - id : int
+                - name : String
+                - price : double
+                - quantityInStock : int
+                - rating : double
+                + getCategory()
+                + getDescription()
+                + getId()
+                + getImageFileName()
+                + getName()
+                + getPrice()
+                + getQuantityInStock()
+                + getRating()
+                + setCategory()
+                + setDescription()
+                + setId()
+                + setImageFileName()
+                + setName()
+                + setPrice()
+                + setQuantityInStock()
+                + setRating()
+            }
+          }
+        }
+
+      namespace com.example.lbycpeifinalproject {
+          namespace seller {
+            class com.example.lbycpeifinalproject.seller.AddProductApplication {
+                {static} + main()
+                + start()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace seller {
+            class com.example.lbycpeifinalproject.seller.AddProductController {
+                + editManageProduct : Text
+                + errorMessage : Text
+                + imageTextBoxFour : TextField
+                + imageTextBoxOne : TextField
+                + imageTextBoxThree : TextField
+                + imageTextBoxTwo : TextField
+                + inputCategories : TextField
+                + inputPrice : TextField
+                + inputProductDescription : TextArea
+                + inputProductName : TextField
+                + inputQuantity : TextField
+                + productImage : ImageView
+                + productIndex : int
+                + initialize()
+                # onCancelButton()
+                # onSaveButton()
+                # showImageFour()
+                # showImageOne()
+                # showImageThree()
+                # showImageTwo()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace seller {
+            class com.example.lbycpeifinalproject.seller.EditProductApplication {
+                {static} - productIndex : int
+                {static} + getProductIndex()
+                {static} + main()
+                + setProductIndex()
+                + start()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace seller {
+            class com.example.lbycpeifinalproject.seller.EditProductController {
+                + editManageProduct : Text
+                + errorMessage : Text
+                + imageTextBoxFour : TextField
+                + imageTextBoxOne : TextField
+                + imageTextBoxThree : TextField
+                + imageTextBoxTwo : TextField
+                + inputCategories : TextField
+                + inputPrice : TextField
+                + inputProductDescription : TextArea
+                + inputProductName : TextField
+                + inputQuantity : TextField
+                + productImage : ImageView
+                + productIndex : int
+                + initialize()
+                # onCancelButton()
+                # onSaveButton()
+                # showImageFour()
+                # showImageOne()
+                # showImageThree()
+                # showImageTwo()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace seller {
+            class com.example.lbycpeifinalproject.seller.ManageProducts {
+                {static} + main()
+                + start()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace seller {
+            class com.example.lbycpeifinalproject.seller.ManageProductsController {
+                + edit1 : Button
+                + edit2 : Button
+                + edit3 : Button
+                + edit4 : Button
+                + edit5 : Button
+                + edit6 : Button
+                + edit7 : Button
+                + edit8 : Button
+                + edit9 : Button
+                + gridPane : GridPane
+                + id1 : Text
+                + id2 : Text
+                + id3 : Text
+                + id4 : Text
+                + id5 : Text
+                + id6 : Text
+                + id7 : Text
+                + id8 : Text
+                + id9 : Text
+                + name1 : Text
+                + name2 : Text
+                + name3 : Text
+                + name4 : Text
+                + name5 : Text
+                + name6 : Text
+                + name7 : Text
+                + name8 : Text
+                + name9 : Text
+                + nextPage : Button
+                + pageNum : Text
+                + prevPage : Button
+                + price1 : Text
+                + price2 : Text
+                + price3 : Text
+                + price4 : Text
+                + price5 : Text
+                + price6 : Text
+                + price7 : Text
+                + price8 : Text
+                + price9 : Text
+                + remove1 : Button
+                + remove2 : Button
+                + remove3 : Button
+                + remove4 : Button
+                + remove5 : Button
+                + remove6 : Button
+                + remove7 : Button
+                + remove8 : Button
+                + remove9 : Button
+                - currentPage : int
+                - totalPages : int
+                + initialize()
+                - editButton()
+                - initContent()
+                - onAddProduct()
+                - onEdit1()
+                - onEdit2()
+                - onEdit3()
+                - onEdit4()
+                - onEdit5()
+                - onEdit6()
+                - onEdit7()
+                - onEdit8()
+                - onEdit9()
+                - onHome()
+                - onNextPage()
+                - onPrevPage()
+                - onRemove1()
+                - onRemove2()
+                - onRemove3()
+                - onRemove4()
+                - onRemove5()
+                - onRemove6()
+                - onRemove7()
+                - onRemove8()
+                - onRemove9()
+                - removeButton()
+                - setVisibility()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace seller {
+            class com.example.lbycpeifinalproject.seller.SellerMain {
+                + start()
+            }
+          }
+        }
+
+
+        namespace com.example.lbycpeifinalproject {
+          namespace seller {
+            class com.example.lbycpeifinalproject.seller.SellerMainController {
+                + manageProducts : Button
+                - onExit()
+                - onManageProducts()
+            }
+          }
+        }
+
+
+  com.example.lbycpeifinalproject.buyer.BuyerMain -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.Catalogue -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.Checkout -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.CheckoutController o-- com.example.lbycpeifinalproject.misc.CartController : cc
+  com.example.lbycpeifinalproject.buyer.Login -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.SearchForProduct -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.SeeCart -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.SeeCartController o-- com.example.lbycpeifinalproject.misc.CartController : cc
+  com.example.lbycpeifinalproject.buyer.SeeCartController o-- com.example.lbycpeifinalproject.misc.DatabaseController : dc
+  com.example.lbycpeifinalproject.buyer.ViewProduct -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.ViewProductController o-- com.example.lbycpeifinalproject.misc.CartController : cc
+  com.example.lbycpeifinalproject.buyer.ViewProductController o-- com.example.lbycpeifinalproject.misc.DatabaseController : dc
+  com.example.lbycpeifinalproject.misc.CartObject .up.|> com.example.lbycpeifinalproject.misc.CartInterface
+  com.example.lbycpeifinalproject.misc.ProductObject .up.|> com.example.lbycpeifinalproject.misc.ProductInterface
+  com.example.lbycpeifinalproject.misc.CartObject -up-|> com.example.lbycpeifinalproject.misc.CartController
+  com.example.lbycpeifinalproject.misc.ProductObject -up-|> com.example.lbycpeifinalproject.misc.DatabaseController
+  com.example.lbycpeifinalproject.seller.AddProductApplication -up-|> javafx.application.Application
+    com.example.lbycpeifinalproject.seller.AddProductController o-- com.example.lbycpeifinalproject.misc.DatabaseController : dc
+    com.example.lbycpeifinalproject.seller.EditProductApplication -up-|> javafx.application.Application
+    com.example.lbycpeifinalproject.seller.EditProductController o-- com.example.lbycpeifinalproject.misc.DatabaseController : dc
+    com.example.lbycpeifinalproject.seller.ManageProducts -up-|> javafx.application.Application
+    com.example.lbycpeifinalproject.seller.ManageProductsController o-- com.example.lbycpeifinalproject.misc.DatabaseController : dc
+    com.example.lbycpeifinalproject.seller.SellerMain -up-|> javafx.application.Application
+  
+
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

@@ -1,5 +1,12 @@
 # LBYCPEI-FinalProject
 
+**Project Title:** Chopee
+
+**Members**
+1. Benitez, Renz Jericho A.
+2. Campit, Kyle Francis M.
+3. Chua, Marcus Luis M.
+
 **Pages:**
 
 - Log-in / Register
@@ -20,24 +27,4 @@
         - Add Product
         - Edit Product
         - Remove Product
-
-**Custom Product Object:**
-
-- String name
-- double price
-- int quantityInStock
-- String[] imageFileName
-- String description
-- String[] category
-- double rating
-
-**Division of Tasks**
-
-- Log-in / Register (RENZ) **[DONE]**
-- View Catalogue (MARCUS) **[DONE]**
-- View Product (KYLE) **[DONE]**
-- Cart Page (KYLE) **[DONE]**
-- Search for Product (RENZ)
-- View Catalogue (MARCUS) **[DONE]**
-- Manage Products (KYLE) **[DONE]**
-- Database (KYLE) **[DONE]**
+    

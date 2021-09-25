@@ -1,0 +1,313 @@
+@startuml
+
+title __LBYCPEI-FINALPROJECT's Class Diagram__\n
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      class com.example.lbycpeifinalproject.MainHandler {
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.BuyerMain {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.BuyerMainController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.Catalogue {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.Checkout {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.CheckoutController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.Login {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.LoginController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.SearchForProduct {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.SearchForProductController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.SeeCart {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.SeeCartController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.ViewProduct {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace buyer {
+        class com.example.lbycpeifinalproject.buyer.ViewProductController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace misc {
+        class com.example.lbycpeifinalproject.misc.CartController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace misc {
+        interface com.example.lbycpeifinalproject.misc.CartInterface {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace misc {
+        class com.example.lbycpeifinalproject.misc.CartObject {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace misc {
+        class com.example.lbycpeifinalproject.misc.DatabaseController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace misc {
+        interface com.example.lbycpeifinalproject.misc.ProductInterface {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace misc {
+        class com.example.lbycpeifinalproject.misc.ProductObject {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace seller {
+        class com.example.lbycpeifinalproject.seller.AddProductApplication {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace seller {
+        class com.example.lbycpeifinalproject.seller.AddProductController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace seller {
+        class com.example.lbycpeifinalproject.seller.EditProductApplication {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace seller {
+        class com.example.lbycpeifinalproject.seller.EditProductController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace seller {
+        class com.example.lbycpeifinalproject.seller.ManageProducts {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace seller {
+        class com.example.lbycpeifinalproject.seller.ManageProductsController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace seller {
+        class com.example.lbycpeifinalproject.seller.SellerMain {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.lbycpeifinalproject {
+      namespace seller {
+        class com.example.lbycpeifinalproject.seller.SellerMainController {
+        }
+      }
+    }
+  }
+  
+
+  com.example.lbycpeifinalproject.buyer.BuyerMain -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.Catalogue -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.Checkout -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.CheckoutController o-- com.example.lbycpeifinalproject.misc.CartController : cc
+  com.example.lbycpeifinalproject.buyer.Login -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.SearchForProduct -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.SeeCart -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.SeeCartController o-- com.example.lbycpeifinalproject.misc.CartController : cc
+  com.example.lbycpeifinalproject.buyer.SeeCartController o-- com.example.lbycpeifinalproject.misc.DatabaseController : dc
+  com.example.lbycpeifinalproject.buyer.ViewProduct -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.buyer.ViewProductController o-- com.example.lbycpeifinalproject.misc.CartController : cc
+  com.example.lbycpeifinalproject.buyer.ViewProductController o-- com.example.lbycpeifinalproject.misc.DatabaseController : dc
+  com.example.lbycpeifinalproject.misc.CartObject .up.|> com.example.lbycpeifinalproject.misc.CartInterface
+  com.example.lbycpeifinalproject.misc.ProductObject .up.|> com.example.lbycpeifinalproject.misc.ProductInterface
+  com.example.lbycpeifinalproject.seller.AddProductApplication -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.seller.AddProductController o-- com.example.lbycpeifinalproject.misc.DatabaseController : dc
+  com.example.lbycpeifinalproject.seller.EditProductApplication -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.seller.EditProductController o-- com.example.lbycpeifinalproject.misc.DatabaseController : dc
+  com.example.lbycpeifinalproject.seller.ManageProducts -up-|> javafx.application.Application
+  com.example.lbycpeifinalproject.seller.ManageProductsController o-- com.example.lbycpeifinalproject.misc.DatabaseController : dc
+  com.example.lbycpeifinalproject.seller.SellerMain -up-|> javafx.application.Application
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
