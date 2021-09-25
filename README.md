@@ -7,6 +7,8 @@
 2. Campit, Kyle Francis M.
 3. Chua, Marcus Luis M.
 
+**NOTE:** Execute the main method in the MainHandler Class to run the program.
+
 **Pages:**
 
 - Log-in / Register
